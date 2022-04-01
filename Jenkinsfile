@@ -5,12 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/afparedes/java-rest-api-calculator-1.git'
-                sh './mvnw clean compile'
+                sh 'mvn clean compile'
             }
         }
         stage('Test') {
                     steps {
-                        sh './mvnw test'
+                        sh 'mvn test'
                     }
         }
     }
